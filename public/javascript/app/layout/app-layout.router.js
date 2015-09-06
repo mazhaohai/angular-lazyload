@@ -1,0 +1,31 @@
+define([],function(){
+	return {
+		defaultRoutePath:"/",
+		lazyCfg:{
+			"stateName":"app",
+            "urlPrefix":"/",
+            "type":"ngload",
+            "src":'javascript/app/cloud/app-cloud.module.js'
+		},
+		routers:{
+			"app":{
+				url:"",
+				dependencies:[
+					"javascript/app/layout/home.controller.js"
+				],
+				views:{
+					"header":{
+						templateUrl:"javascript/app/layout/header.html"
+					},
+					"":{
+						templateUrl:"javascript/app/layout/home.html",
+						controller:"HomeCtrl"
+					},
+					"content@app":{
+						templateUrl:"javascript/app/layout/main.html",
+					}
+				}
+			},
+		}
+	}
+})

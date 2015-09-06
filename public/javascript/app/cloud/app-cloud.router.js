@@ -1,0 +1,22 @@
+define([],function(){
+	return {
+		defaultRoutePath:"/",
+		lazyCfg:{
+			"stateName":"app.cloud",
+            "urlPrefix":"/cloud",
+            "type":"ngload",
+            "src":'javascript/app/cloud/app-cloud.module.js'
+		},
+		routers:{
+			"app.cloud":{
+				url:"/cloud",
+				dependencies:[],
+				views:{
+					"content@app":{
+						templateUrl:"javascript/app/cloud/cloud.html"
+					}
+				}
+			}
+		}
+	}
+})

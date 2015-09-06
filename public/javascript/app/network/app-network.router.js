@@ -1,0 +1,26 @@
+define([],function(){
+	return {
+		defaultRoutePath:"/",
+		lazyCfg:{
+			"stateName":"app.network",
+            "urlPrefix":"/network",
+            "type":"ngload",
+            "src":'javascript/app/network/app-network.module.js'
+		},
+		routers:{
+			"app.network":{
+				url:"/network",
+				abstract:true
+			},
+			"app.network.mynetwork":{
+				url:"/network/my",
+				dependencies:[],
+				views:{
+					"content@app":{
+						templateUrl:'javascript/app/network/network.html'
+					}
+				}
+			}
+		}
+	}
+})
