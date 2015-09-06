@@ -6,7 +6,7 @@ define(["require","angular","angularAMD","bootstrap","angular-route","uiRouterEx
 		'app.lazyHelper'
 		]
 	).constant("FEATURE_STATES",[
-		"layout/app-layout.router",
+		//"layout/app-layout.router",
 		"cloud/app-cloud.router",
 		"network/app-network.router"
 	]).config(['$futureStateProvider','$locationProvider',function($futureStateProvider,$locationProvider) {

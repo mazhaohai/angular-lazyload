@@ -1,19 +1,25 @@
 define([],function(){
+	var basePath = {
+		cloud:globalConfig.appPath+"cloud/"
+	}
 	return {
 		defaultRoutePath:"/",
 		lazyCfg:{
 			"stateName":"app.cloud",
             "urlPrefix":"/cloud",
             "type":"ngload",
-            "src":'javascript/app/cloud/app-cloud.module.js'
+            "src":basePath.cloud+'app-cloud.module.js'
 		},
 		routers:{
 			"app.cloud":{
 				url:"/cloud",
-				dependencies:[],
+				dependencies:[
+					basePath.cloud + "cloud.controller.js"
+				],
 				views:{
 					"content@app":{
-						templateUrl:"javascript/app/cloud/cloud.html"
+						templateUrl:basePath.cloud+"cloud.html",
+						controller:"CloudCtrl"
 					}
 				}
 			}

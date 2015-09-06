@@ -1,11 +1,14 @@
 define([],function(){
+	var basePath = {
+		network:globalConfig.appPath+"network/"
+	}
 	return {
 		defaultRoutePath:"/",
 		lazyCfg:{
 			"stateName":"app.network",
             "urlPrefix":"/network",
             "type":"ngload",
-            "src":'javascript/app/network/app-network.module.js'
+            "src":basePath.network+'app-network.module.js'
 		},
 		routers:{
 			"app.network":{
@@ -13,11 +16,14 @@ define([],function(){
 				abstract:true
 			},
 			"app.network.mynetwork":{
-				url:"/network/my",
-				dependencies:[],
+				url:"/my",
+				dependencies:[
+					basePath.network+"network.controller.js"
+				],
 				views:{
 					"content@app":{
-						templateUrl:'javascript/app/network/network.html'
+						templateUrl:basePath.network+'network.html',
+						controller:"NetworkCtrl"
 					}
 				}
 			}

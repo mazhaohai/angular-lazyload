@@ -1,28 +1,31 @@
 define([],function(){
+	var basePath = {
+		layout:globalConfig.appPath+"layout/"
+	}
 	return {
 		defaultRoutePath:"/",
 		lazyCfg:{
 			"stateName":"app",
             "urlPrefix":"/",
             "type":"ngload",
-            "src":'javascript/app/cloud/app-cloud.module.js'
+            "src":basePath.layout+'app-layout.module.js'
 		},
 		routers:{
 			"app":{
 				url:"",
 				dependencies:[
-					"javascript/app/layout/home.controller.js"
+					basePath.layout+"home.controller.js"
 				],
 				views:{
 					"header":{
-						templateUrl:"javascript/app/layout/header.html"
+						templateUrl:basePath.layout+"header.html"
 					},
 					"":{
-						templateUrl:"javascript/app/layout/home.html",
+						templateUrl:basePath.layout+"home.html",
 						controller:"HomeCtrl"
 					},
 					"content@app":{
-						templateUrl:"javascript/app/layout/main.html",
+						templateUrl:basePath.layout+"main.html",
 					}
 				}
 			},
