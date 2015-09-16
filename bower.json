@@ -15,13 +15,14 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5",
     "angular": "~1.4.4",
-    "ui-router": "~0.2.15",
-    "require-css": "~0.1.8",
+    "angular-bootstrap": "~0.13.4",
     "angularAMD": "~0.2.1",
-    "ui-router-extras": "~0.0.14",
-    "moment": "~2.10.6"
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.6",
+    "require-css": "~0.1.8",
+    "ui-router": "~0.2.15",
+    "ui-router-extras": "~0.0.14"
   },
   "overrides": {
     "bootstrap": {

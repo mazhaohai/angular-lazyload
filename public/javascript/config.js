@@ -14,7 +14,7 @@ require.config({
         'angular':globalConfig.libPath+'angular',
 		//'angular-animate':globalConfig.libPath+'angular-animate',
         'angular-route':globalConfig.libPath+'angular-ui-router',
-        //'angular-bootstrap':globalConfig.libPath+'ui-bootstrap-tpls', 
+        'angular-bootstrap':globalConfig.libPath+'ui-bootstrap-tpls', 
         'bootstrap':globalConfig.libPath+'bootstrap',
         //'mymodule':globalConfig.libPath+'mymodule',
         //'messenger-theme':globalConfig.libPath+'messenger-theme-future',
@@ -38,12 +38,12 @@ require.config({
 			deps:['angular'],
 			exports:'angular'
 		},
-		/*'angular-bootstrap':{
+		'angular-bootstrap':{
 			deps:['angular'],
 			exports:'angular'
-		},*/
+		},
 		'bootstrap':{
-			deps:['jquery','css!/javascript/libs/bootstrap'],
+			deps:['jquery','angular-bootstrap','css!/javascript/libs/bootstrap'],
 			exports:'jquery'
 		},
 		'jquery':{

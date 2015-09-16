@@ -6,5 +6,5 @@
            require
            ng-pattern="/^[A-Za-z0-9]*$/" maxlength="5" />
     <span  ng-if="myform.price_field.$error.pattern">只能是数字或者字母!</span>
-    <input type="submit" class="btn">
+    <input ng-click="defCtro()" type="submit" class="btn">
 </form>
