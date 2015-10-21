@@ -3,9 +3,11 @@ angular lazyload module
 
 angular seed project / lazyload module
 
-npm install angularAMD
+bower install
 
-npm install ui-router-extras
+gulp addLibs
+
+node ./bin/www
 
 注意：
 1.在app.js文件中
