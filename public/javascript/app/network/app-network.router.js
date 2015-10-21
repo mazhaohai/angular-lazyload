@@ -5,17 +5,17 @@ define([],function(){
 	return {
 		defaultRoutePath:"/",
 		lazyCfg:{
-			"stateName":"app.network",
+			"stateName":"app.network1",
             "urlPrefix":"/network",
             "type":"ngload",
             "src":basePath.network+'app-network.module.js'
 		},
 		routers:{
-			"app.network":{
+			"app.network1":{
 				url:"/network",
 				abstract:true
 			},
-			"app.network.mynetwork":{
+			"app.network1.mynetwork":{
 				url:"/my",
 				dependencies:[
 					basePath.network+"network.controller.js"

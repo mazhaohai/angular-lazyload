@@ -39,16 +39,19 @@ require.config({
 			exports:'angular'
 		},
 		'angular-bootstrap':{
-			deps:['angular'],
+			deps:['angular','moment'],
 			exports:'angular'
 		},
 		'bootstrap':{
 			deps:['jquery','angular-bootstrap','css!/javascript/libs/bootstrap'],
 			exports:'jquery'
 		},
-		'jquery':{
-			exports:'Jquery'
-		},
+		'moment':{ 
+            exports:'moment'
+        }, 
+        'jquery':{
+            exports:'$'
+        },
 		/*'messenger':{
             deps:['jquery','css!/javascript/libs/messenger','css!/javascript/libs/messenger-theme-air'],
             exports:'Jquery'
@@ -62,12 +65,11 @@ require.config({
 			exports:"angular"
 		},
 		"ngload":{
-			deps:["angular"],
+			deps:["angularAMD"],
 			exports:"angular"
 		},
 		"uiRouterExtras":{
-			deps:["angular"],
-			exports:"angular"
+			deps:["angular-route"]
 		}
 	},
 	map:{

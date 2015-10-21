@@ -1,0 +1,17 @@
+.DS_Store
+.DS_Store?
+*.zip
+*.swp
+/node_modules
+/bower_components
+/cmp/.sass-cache
+/npm-debug.log
+/public/javascript/libs
+/public/dest
+/.sass-cache
+/logs
+/temp/*
+/public/css/style.css
+/public/css/vpc.css
+/static
+/test

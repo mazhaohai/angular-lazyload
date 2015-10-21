@@ -13,10 +13,10 @@ gulp.task("addLibs",function(){
 		.pipe(gulp.dest("public/javascript/libs"));
 });
 
-gulp.task("uglify",['clean'],function(){
-	return gulp.src(["public/javascript/libs/*.js"])
+gulp.task("uglify",function(){
+	return gulp.src(["public/**/*.js"])
 		.pipe(uglify())
-		.pipe(concat("all.js"))
-		.pipe(rename({"extname":".min.js"}))
-		.pipe(gulp.dest("public/javascript/dest"));
+		//.pipe(concat("all.js"))
+		//.pipe(rename({"extname":".min.js"}))
+		.pipe(gulp.dest("public/dest"));
 })

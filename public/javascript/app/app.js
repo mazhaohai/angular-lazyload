@@ -1,8 +1,9 @@
-define(["require","angular","angularAMD","bootstrap","angular-route","uiRouterExtras","layout/app-layout.module","utils/lazyHelper"],function(require,ng,angularAMD){
+define(["require","angular","angularAMD","angular-route","angular-bootstrap","bootstrap","uiRouterExtras","layout/app-layout.module","utils/lazyHelper",'utils/test-module'],function(require,ng,angularAMD){
 	return angular.module('app', [
 		'ui.router',
 		'ui.bootstrap',
 		'ct.ui.router.extras',
+		'myModule',
 		'app.layout',
 		'app.lazyHelper'
 		]

@@ -18,7 +18,7 @@ define(["utils/depResolve"],function(depResolve){
 				self.filter     = $filterProvider.register;
 				self.factory    = $provide.factory;
 				self.service    = $provide.service;
-				console.log(routerConfig.routers);
+				if(!routerConfig) return;
 				if(routerConfig.routers){
 					angular.forEach(routerConfig.routers,function(router,path){
 						var tempRouter={
