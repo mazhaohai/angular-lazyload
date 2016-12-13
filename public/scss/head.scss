@@ -1,0 +1,25 @@
+$font-color: #ff0000;
+
+a {
+  color: $font-color;
+}
+@mixin center-block {
+    margin-left:auto;
+    margin-right:auto;
+}
+.demo{
+    @include center-block;
+}
+
+@mixin horizontal-line($border:1px dashed #ccc, $padding:10px){
+    border-bottom:$border;
+    padding-top:$padding;
+    padding-bottom:$padding;  
+}
+.imgtext-h li{
+    color:$font-color;
+    @include horizontal-line(1px solid #ccc);
+}
+.imgtext-h--product li{
+    @include horizontal-line($padding:15px);
+}

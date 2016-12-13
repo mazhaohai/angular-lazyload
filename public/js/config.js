@@ -1,0 +1,81 @@
+(function(window){
+	var global={
+		libPath:'/js/libs/',
+        appPath:'/js/app/',
+        ctrlPath:'controllers/'
+	};
+	window.globalConfig=window.globalConfig||global;
+})(window)
+require.config({
+	baseUrl:"/js/app/",
+	paths:{
+		'app':globalConfig.appPath+"app",
+		'jquery':'//cdn.bootcss.com/jquery/2.2.3/jquery.min',
+        'angular':'//cdn.bootcss.com/angular.js/1.5.9/angular.min',
+		//'angular-animate':globalConfig.libPath+'angular-animate',
+        'angular-route':'//cdn.bootcss.com/angular-ui-router/0.3.2/angular-ui-router.min',
+        'angular-bootstrap':'//cdn.bootcss.com/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min', 
+        'bootstrap':'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min',
+		'uiRouterExtras':'//cdn.bootcss.com/ui-router-extras/0.1.3/ct-ui-router-extras.min',
+		'angularAMD':globalConfig.libPath + "angularAMD",
+		"ngload":globalConfig.libPath + "ngload"
+	},
+	shim:{
+		'angular':{
+			exports:'angular'
+		},
+		'angular-animate':{
+			deps:['angular'],
+			exports:'angular'
+		},
+		'angular-route':{
+			deps:['angular'],
+			exports:'angular'
+		},
+		'angular-bootstrap':{
+			deps:['angular'],
+			exports:'angular'
+		},
+		'bootstrap':{
+			deps:['jquery','angular-bootstrap'],
+			exports:'jquery'
+		},
+		'moment':{ 
+            exports:'moment'
+        }, 
+        'jquery':{
+            exports:'$'
+        },
+		/*'messenger':{
+            deps:['jquery','css!/js/libs/messenger','css!/js/libs/messenger-theme-air'],
+            exports:'Jquery'
+        },
+        'messenger-theme':{
+            deps:['messenger'],
+            exports:'Jquery'
+        },*/
+        "angularAMD":{
+			deps:["angular"],
+			exports:"angular"
+		},
+		"ngload":{
+			deps:["angularAMD"],
+			exports:"angular"
+		},
+		"uiRouterExtras":{
+			deps:["angular-route"]
+		}
+	},
+	map:{
+		'*':{
+			'css':globalConfig.libPath+'css.js'
+		}
+	},
+	urlArgs:""
+});
+/*require(['app'],function(app){
+	angular.bootstrap(document, ['app']);
+})*/
+require(['app','angularAMD'],function(app,angularAMD){
+	angularAMD.bootstrap(app);
+})

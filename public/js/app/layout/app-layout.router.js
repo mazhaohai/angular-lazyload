@@ -1,0 +1,42 @@
+define([],function(){
+	var basePath = {
+		layout:globalConfig.appPath+"layout/"
+	}
+	return {
+		defaultRoutePath:"/",
+		routers:{
+			"app":{
+				url:"",
+				dependencies:[
+					basePath.layout+"home.controller.js",
+					basePath.layout+"header.controller.js"
+				],
+				views:{
+					"header":{
+						templateUrl:basePath.layout+"header.html",
+						controller:"HeaderCtrl"
+					},
+					"":{
+						templateUrl:basePath.layout+"home.html",
+						controller:"HomeCtrl"
+					},
+					"content@app":{
+						templateUrl:basePath.layout+"main.html",
+					}
+				}
+			},
+			"app.home":{
+				url:"/home",
+				dependencies:[
+					basePath.layout+"home.controller.js"
+				],
+				views:{
+					"content@app":{
+						templateUrl:basePath.layout+"main.html",
+						controller:"HomeCtrl"
+					}
+				}
+			}
+		}
+	}
+})

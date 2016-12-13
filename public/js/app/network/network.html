@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<form name="myform" ng-submit="create()">
+    <input type="text"
+           name="price_field"
+           ng-model="price"
+           require
+           ng-pattern="/^[A-Za-z0-9]*$/" maxlength="5" />
+    <span  ng-if="myform.price_field.$error.pattern">只能是数字或者字母!</span>
+    <input ng-click="defCtro()" type="submit" class="btn">
+</form>
